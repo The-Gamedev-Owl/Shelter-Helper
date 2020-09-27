@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClientStats : MonoBehaviour
+public class ClientStats
 {
     public HouseType HouseType { get; private set; }
     public bool HasGarden { get; private set; }
@@ -27,6 +27,12 @@ public class ClientStats : MonoBehaviour
 
     public ClientStats()
     {
-        // Random every stat
+        HouseType = (HouseType)Random.Range(0, System.Enum.GetValues(typeof(HouseType)).Length);
+        HasGarden = Random.Range(0, 2) == 0;
+        HasChildren = Random.Range(0, 2) == 0;
+        HasOtherAnimals = Random.Range(0, 2) == 0;
+        Income = Random.Range(300, 2000);
+        ClientPersonality = (ClientPersonality)Random.Range(0, System.Enum.GetValues(typeof(ClientPersonality)).Length);
+        AnimalPersonalityWanted = (AnimalPersonality)Random.Range(0, System.Enum.GetValues(typeof(AnimalPersonality)).Length);
     }
 }
