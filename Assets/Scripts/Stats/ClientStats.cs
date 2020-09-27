@@ -13,15 +13,15 @@ public class ClientStats
     public AnimalPersonality AnimalPersonalityWanted { get; private set; }
 
 
-    public ClientStats(HouseType houseType, bool hasGarden, bool hasChildren, bool hasOtherAnimals, int income,
-        ClientPersonality clientPersonality, AnimalPersonality animalPersonalityWanted)
+    public ClientStats(HouseType houseType, bool hasGarden, bool hasChildren,
+        bool hasOtherAnimals, int income, AnimalPersonality animalPersonalityWanted)
     {
         HouseType = houseType;
         HasGarden = hasGarden;
         HasChildren = hasChildren;
         HasOtherAnimals = hasOtherAnimals;
         Income = income;
-        ClientPersonality = clientPersonality;
+        ClientPersonality = (ClientPersonality)Random.Range(0, System.Enum.GetValues(typeof(ClientPersonality)).Length - 1);
         AnimalPersonalityWanted = animalPersonalityWanted;
     }
 

@@ -12,17 +12,6 @@ public class AnimalStats
     public AnimalPersonality AnimalPersonality { get; private set; }
 
 
-    public AnimalStats(HouseType houseType, bool hasGarden, bool hasChildren,
-        bool hasOtherAnimals, int cost, AnimalPersonality animalPersonality)
-    {
-        HouseType = houseType;
-        HasGarden = hasGarden;
-        HasChildren = hasChildren;
-        HasOtherAnimals = hasOtherAnimals;
-        Cost = cost;
-        AnimalPersonality = animalPersonality;
-    }
-
     public AnimalStats()
     {
         HouseType = (HouseType)Random.Range(0, System.Enum.GetValues(typeof(HouseType)).Length);
