@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e13651910e5b871409668f9bf614a44a, type: 3}
+  m_Name: ClientPersonality
+  m_EditorClassIdentifier: 
+  clientPersonalityAnswers:
+  - personalityAnswer: 0
+    answers:
+    - Je suis gentil
+    - Je suis un ange !
+  - personalityAnswer: 1
+    answers:
+    - "\xE7a va"
+    - C'est OK
+  - personalityAnswer: 2
+    answers:
+    - "Je suis tr\xE8s col\xE9rique"
+    - "Je suis tr\xE8s impatient"
+  clientPersonalityAnswersVague:
+  - personalityAnswer: 0
+    answers:
+    - "ouais \xE7a va"
+    - ya mieux
+  - personalityAnswer: 1
+    answers:
+    - j'sais pas
+    - "aucune id\xE9e"
+  - personalityAnswer: 2
+    answers:
+    - disons que... pas ouf
+    - Peu de gens m'aime
