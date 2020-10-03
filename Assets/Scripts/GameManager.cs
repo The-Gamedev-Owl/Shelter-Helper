@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     {
         _generator.GenerateClientAnimals();
         questionsLeft = 0;
+        ChooseRandomClient();
     }
 
     // Update is called once per frame
@@ -79,27 +80,27 @@ public class GameManager : MonoBehaviour
         {
             gardenText.GetComponent<Text>().text = _answerManager.GetRandomAnswerGarden(true, currentClient.HasGarden);
         }
-        else if (firstVague == 1 || secondVague == 1)
+        if (firstVague == 1 || secondVague == 1)
         {
             childrenText.GetComponent<Text>().text = _answerManager.GetRandomAnswerChildren(true, currentClient.HasChildren);
         }
-        else if (firstVague == 2 || secondVague == 2)
+        if (firstVague == 2 || secondVague == 2)
         {
             houseTypeText.GetComponent<Text>().text = _answerManager.GetRandomAnswerHouseType(true, currentClient.HouseType);
         }
-        else if (firstVague == 3 || secondVague == 3)
+        if (firstVague == 3 || secondVague == 3)
         {
             otherAnimalsText.GetComponent<Text>().text = _answerManager.GetRandomAnswerOtherAnimals(true, currentClient.HasOtherAnimals);
         }
-        else if (firstVague == 4 || secondVague == 4)
+        if (firstVague == 4 || secondVague == 4)
         {
             incomeText.GetComponent<Text>().text = _answerManager.GetRandomAnswerIncome(true, currentClient.Income);
         }
-        else if (firstVague == 5 || secondVague == 5)
+        if (firstVague == 5 || secondVague == 5)
         {
             clientPersonalityText.GetComponent<Text>().text = _answerManager.GetRandomAnswerClientPersonality(true, currentClient.ClientPersonality);
         }
-        else if (firstVague == 6 || secondVague == 6)
+        if (firstVague == 6 || secondVague == 6)
         {
             animalPersonalityText.GetComponent<Text>().text = _answerManager.GetRandomAnswerAnimalPersonality(true, currentClient.AnimalPersonalityWanted);
         }

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gardenAnswers: {fileID: 11400000, guid: 37d9d861a6786f744ad3ba309bf6a3f3, type: 2}
   childrenAnswers: {fileID: 11400000, guid: c8baf00b0f2539146ab50a3ee13721a6, type: 2}
-  animalAnswers: {fileID: 11400000, guid: 3bf7df7a94c93ec49884c86e8f4bcac7, type: 2}
-  clientAnswers: {fileID: 11400000, guid: 8a6f5b081e34a7f478aac973f136a7a4, type: 2}
+  animalAnswers: {fileID: 11400000, guid: 8a6f5b081e34a7f478aac973f136a7a4, type: 2}
+  clientAnswers: {fileID: 11400000, guid: 3bf7df7a94c93ec49884c86e8f4bcac7, type: 2}
   hasOtherAnimalsAnswers: {fileID: 11400000, guid: f894c72c112bc3c449ea964386b9eaf8, type: 2}
   houseTypeAnswers: {fileID: 11400000, guid: c1af0efe54e0fb54eadb83cfb17bf45b, type: 2}
   incomeAnswers: {fileID: 11400000, guid: 55512925f8cd74a478e49e68a3b0cb08, type: 2}
