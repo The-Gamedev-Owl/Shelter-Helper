@@ -13,8 +13,11 @@ public class DisplayAnimals : MonoBehaviour
 
     [SerializeField] private ClientAnimalManager _manager;
 
+    public static DisplayAnimals Instance;
+
     void Start()
     {
+        Instance = this;
         StartCoroutine(WaitBeforeGenerateAnimals());
     }
 
@@ -33,11 +36,18 @@ public class DisplayAnimals : MonoBehaviour
     private void GenerateRandomSpawn(AnimalStats currentAnimalStats)
     {
         GameObject animalCreated;
+        Vector2 spawnPoint = GenerateRandomSpawnPoint();
+
+        animalCreated = Instantiate(_animalPrefab, spawnPoint, Quaternion.identity, _animalsParent);
+        animalCreated.GetComponent<Animal>().stats = currentAnimalStats;
+    }
+
+    public Vector2 GenerateRandomSpawnPoint()
+    {
         Vector2 firstPoint = Vector2.Lerp(_spawnPointLeft.position, _spawnPointTop.position, Random.Range(0f, 1f));
         Vector2 secondPoint = Vector2.Lerp(_spawnPointBottom.position, _spawnPointRight.position, Random.Range(0f, 1f));
         Vector2 finalPoint = Vector2.Lerp(firstPoint, secondPoint, Random.Range(0f, 1f));
 
-        animalCreated = Instantiate(_animalPrefab, finalPoint, Quaternion.identity, _animalsParent);
-        animalCreated.GetComponent<Animal>().stats = currentAnimalStats;
+        return finalPoint;
     }
 }
