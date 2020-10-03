@@ -12,5 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73f97390f7621e44a8e4f06fb533e155, type: 3}
   m_Name: HasOtherAnimals
   m_EditorClassIdentifier: 
-  hasOtherAnimalsAnswers: []
-  hasOtherAnimalsAnswersVague: []
+  hasOtherAnimalsAnswers:
+  - boolAnswer: 1
+    answers:
+    - other 1
+    - other 2
+  - boolAnswer: 0
+    answers:
+    - no other 1
+    - no other 2
+  hasOtherAnimalsAnswersVague:
+  - boolAnswer: 1
+    answers:
+    - other vague 1
+    - other vague 2
+  - boolAnswer: 0
+    answers:
+    - no other vague 1
+    - no other vague 2

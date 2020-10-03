@@ -12,5 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a857b707fee94704aa17526c40e3b3a1, type: 3}
   m_Name: HouseType
   m_EditorClassIdentifier: 
-  houseAnswers: []
-  houseAnswersVague: []
+  houseAnswers:
+  - houseAnswer: 0
+    answers:
+    - apartment 1
+    - apartment 2
+  - houseAnswer: 1
+    answers:
+    - house 1
+    - house 2
+  houseAnswersVague:
+  - houseAnswer: 0
+    answers:
+    - apartment vague 1
+    - apartment vague 2
+  - houseAnswer: 1
+    answers:
+    - house vague 1
+    - house vague 2

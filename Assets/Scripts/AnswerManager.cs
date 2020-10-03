@@ -7,7 +7,7 @@ public class AnswerManager : MonoBehaviour
 {
     [SerializeField]
     private Answers answers;
-    int GetRandomNumberOfQuestions()
+    public int GetRandomNumberOfQuestions()
     {
         int numbers = Random.Range(3, 6);
         return numbers;

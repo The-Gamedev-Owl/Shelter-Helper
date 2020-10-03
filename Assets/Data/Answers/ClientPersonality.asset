@@ -12,5 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d383e138b9c23049aedcadf090336bc, type: 3}
   m_Name: ClientPersonality
   m_EditorClassIdentifier: 
-  clientPersonalityAnswers: []
-  clientPersonalityAnswersVague: []
+  clientPersonalityAnswers:
+  - personalityAnswer: 0
+    answers:
+    - Good 1
+    - Good 2
+  - personalityAnswer: 1
+    answers:
+    - Neutral 1
+    - Neutral 2
+  - personalityAnswer: 2
+    answers:
+    - Bad 1
+    - Bad 2
+  clientPersonalityAnswersVague:
+  - personalityAnswer: 0
+    answers:
+    - Good Vague 1
+    - Good Vague 2
+  - personalityAnswer: 1
+    answers:
+    - Neutral vague 1
+    - Neutral vague 2
+  - personalityAnswer: 2
+    answers:
+    - Bad vague 1
+    - Bad vague 2

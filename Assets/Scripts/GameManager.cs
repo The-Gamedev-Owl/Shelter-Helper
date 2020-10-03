@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +14,8 @@ public class GameManager : MonoBehaviour
     public GameObject clientPersonalityText;
     public GameObject animalPersonalityText;
 
+    public List<GameObject> questionButtons;
+
     public ClientAnimalGenerator _generator;
     public ClientAnimalManager _manager;
     public AnswerManager _answerManager;
@@ -24,8 +27,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         _generator.GenerateClientAnimals();
-        questionsLeft = 0;
+        questionsLeft = _answerManager.GetRandomNumberOfQuestions();
         ChooseRandomClient();
+        print("Question left: " + questionsLeft);
     }
 
     // Update is called once per frame
@@ -70,7 +74,8 @@ public class GameManager : MonoBehaviour
             if (secondVague == 6)
             {
                 secondVague = 0;
-            } else
+            }
+            else
             {
                 secondVague += 1;
             }
@@ -104,5 +109,36 @@ public class GameManager : MonoBehaviour
         {
             animalPersonalityText.GetComponent<Text>().text = _answerManager.GetRandomAnswerAnimalPersonality(true, currentClient.AnimalPersonalityWanted);
         }
+
+        FreeRandomAnswer();
+    }
+
+    public void AskButton(int index)
+    {
+        print("Question left: " + questionsLeft);
+        if (questionsLeft > 0)
+        {
+            questionButtons.ElementAt(index).SetActive(false);
+            questionsLeft -= 1;
+        }
+        if (questionsLeft == 0)
+        {
+            DisabledAllQuestions();
+        }
+    }
+
+    private void DisabledAllQuestions()
+    {
+        foreach (GameObject button in questionButtons)
+        {
+            button.GetComponent<Button>().interactable = false;
+        }
+    }
+
+    public void FreeRandomAnswer()
+    {
+        int randomIndex = Random.Range(0, 7);
+
+        questionButtons.ElementAt(randomIndex).SetActive(false);
     }
 }

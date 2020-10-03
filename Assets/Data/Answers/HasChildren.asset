@@ -12,5 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0f30f200d123c547b8499d0d5e7b03a, type: 3}
   m_Name: HasChildren
   m_EditorClassIdentifier: 
-  hasChildrenAnswers: []
-  hasChildrenAnswersVague: []
+  hasChildrenAnswers:
+  - boolAnswer: 1
+    answers:
+    - children 1
+    - children 2
+  - boolAnswer: 0
+    answers:
+    - no children 1
+    - no children 2
+  hasChildrenAnswersVague:
+  - boolAnswer: 1
+    answers:
+    - children vague 1
+    - children vague 2
+  - boolAnswer: 0
+    answers:
+    - no children vague 1
+    - no children vague 2
