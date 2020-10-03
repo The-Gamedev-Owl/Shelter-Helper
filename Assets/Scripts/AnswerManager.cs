@@ -13,37 +13,7 @@ public class AnswerManager : MonoBehaviour
         return numbers;
     }
 
-    public string GetRandomAnswer(Stats statName, bool vague)
-    {
-        string answer = "Null";
-        switch (statName)
-        {
-            case Stats.Garden:
-                print("garden");
-                break;
-            case Stats.Children:
-                print("children");
-                break;
-            case Stats.AnimalPersonality:
-                print("animal");
-                break;
-            case Stats.ClientPersonality:
-                print("client");
-                break;
-            case Stats.HasOtherAnimals:
-                print("other");
-                break;
-            case Stats.HouseType:
-                print("house");
-                break;
-            case Stats.Income:
-                print("income");
-                break;
-        }
-        return answer;
-    }
-
-    private string GetRandomAnswerGarden(bool vague, BoolQuestion answerType)
+    public string GetRandomAnswerGarden(bool vague, bool answerType)
     {
         List<string> answersList;
         if (vague)
@@ -53,6 +23,112 @@ public class AnswerManager : MonoBehaviour
         else
         {
             answersList = answers.gardenAnswers.hasGardenAnswers.Find(item => item.boolAnswer == answerType).answers;
+        }
+        return answersList.ElementAt(Random.Range(0, answersList.Count));
+    }
+
+    public string GetRandomAnswerChildren(bool vague, bool answerType)
+    {
+        List<string> answersList;
+        if (vague)
+        {
+            answersList = answers.childrenAnswers.hasChildrenAnswersVague.Find(item => item.boolAnswer == answerType).answers;
+        }
+        else
+        {
+            answersList = answers.childrenAnswers.hasChildrenAnswers.Find(item => item.boolAnswer == answerType).answers;
+        }
+        return answersList.ElementAt(Random.Range(0, answersList.Count));
+    }
+
+    public string GetRandomAnswerOtherAnimals(bool vague, bool answerType)
+    {
+        List<string> answersList;
+        if (vague)
+        {
+            answersList = answers.hasOtherAnimalsAnswers.hasOtherAnimalsAnswersVague.Find(item => item.boolAnswer == answerType).answers;
+        }
+        else
+        {
+            answersList = answers.hasOtherAnimalsAnswers.hasOtherAnimalsAnswers.Find(item => item.boolAnswer == answerType).answers;
+        }
+        return answersList.ElementAt(Random.Range(0, answersList.Count));
+    }
+
+    public string GetRandomAnswerAnimalPersonality(bool vague, AnimalPersonality answerType)
+    {
+        List<string> answersList;
+        if (vague)
+        {
+            answersList = answers.animalAnswers.animalPersonalityAnswersVague.Find(item => item.personalityAnswer == answerType).answers;
+        }
+        else
+        {
+            answersList = answers.animalAnswers.animalPersonalityAnswers.Find(item => item.personalityAnswer == answerType).answers;
+        }
+        return answersList.ElementAt(Random.Range(0, answersList.Count));
+    }
+
+    public string GetRandomAnswerClientPersonality(bool vague, ClientPersonality answerType)
+    {
+        List<string> answersList;
+        if (vague)
+        {
+            answersList = answers.clientAnswers.clientPersonalityAnswersVague.Find(item => item.personalityAnswer == answerType).answers;
+        }
+        else
+        {
+            answersList = answers.clientAnswers.clientPersonalityAnswers.Find(item => item.personalityAnswer == answerType).answers;
+        }
+        return answersList.ElementAt(Random.Range(0, answersList.Count));
+    }
+
+    public string GetRandomAnswerHouseType(bool vague, HouseType answerType)
+    {
+        List<string> answersList;
+        if (vague)
+        {
+            answersList = answers.houseTypeAnswers.houseAnswersVague.Find(item => item.houseAnswer == answerType).answers;
+        }
+        else
+        {
+            answersList = answers.houseTypeAnswers.houseAnswers.Find(item => item.houseAnswer == answerType).answers;
+        }
+        return answersList.ElementAt(Random.Range(0, answersList.Count));
+    }
+
+    public string GetRandomAnswerIncome(bool vague, int income)
+    {
+        List<string> answersList;
+        if (vague)
+        {
+            if (income > 1000)
+            {
+                answersList = answers.incomeAnswers.incomeAnswersVague.Find(item => item.incomeAnswer == Income.High).answers;
+            }
+            else if (income < 500)
+            {
+                answersList = answers.incomeAnswers.incomeAnswersVague.Find(item => item.incomeAnswer == Income.low).answers;
+            }
+            else
+            {
+                answersList = answers.incomeAnswers.incomeAnswersVague.Find(item => item.incomeAnswer == Income.medium).answers;
+            }
+        }
+        else
+        {
+            if (income > 1000)
+            {
+                answersList = answers.incomeAnswers.incomeAnswers.Find(item => item.incomeAnswer == Income.High).answers;
+            }
+            else if (income < 500)
+            {
+                answersList = answers.incomeAnswers.incomeAnswers.Find(item => item.incomeAnswer == Income.low).answers;
+            }
+            else
+            {
+                answersList = answers.incomeAnswers.incomeAnswers.Find(item => item.incomeAnswer == Income.medium).answers;
+            }
         }
         return answersList.ElementAt(Random.Range(0, answersList.Count));
     }

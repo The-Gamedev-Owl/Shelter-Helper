@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 [Serializable]
-public class ClientPersonalityListAnswers
+public class AnimalPersonalityListAnswers
 {
-    public ClientPersonality personalityAnswer;
+    public AnimalPersonality personalityAnswer;
     public List<string> answers;
 }
 
-[CreateAssetMenu(fileName = "New ClientPersonalityAnswers", menuName = "ClientPersonalityAnswers")]
-public class ClientPersonalityAnswers : ScriptableObject
+[CreateAssetMenu(fileName = "New AnimalPersonalityAnswers", menuName = "AnimalPersonalityAnswers")]
+public class AnimalPersonalityAnswers : ScriptableObject
 {
-    public List<ClientPersonalityListAnswers> clientPersonalityAnswers;
-    public List<ClientPersonalityListAnswers> clientPersonalityAnswersVague;
+    public List<AnimalPersonalityListAnswers> animalPersonalityAnswers;
+    public List<AnimalPersonalityListAnswers> animalPersonalityAnswersVague;
 }

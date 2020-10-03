@@ -6,7 +6,7 @@ using UnityEngine;
 [Serializable]
 public class BoolAnswers
 {
-    public BoolQuestion boolAnswer;
+    public bool boolAnswer;
     public List<string> answers;
 }
 
