@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gameloop : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     public GameObject gardenText;
     public GameObject childrenText;
@@ -12,9 +12,9 @@ public class Gameloop : MonoBehaviour
     public GameObject clientPersonalityText;
     public GameObject animalPersonalityText;
 
-    private ClientAnimalGenerator _generator;
-    private ClientAnimalManager _manager;
-    private AnswerManager _answerManager;
+    public ClientAnimalGenerator _generator;
+    public ClientAnimalManager _manager;
+    public AnswerManager _answerManager;
 
     private ClientStats currentClient;
 
