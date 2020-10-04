@@ -4,26 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class Animal : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class Animal : MonoBehaviour, IPointerClickHandler
 {
     public AnimalStats stats;
 
     [SerializeField] private float _moveSpeed;
 
-
-    private void Start()
+    private void OnEnable()
     {
         StartCoroutine(MoveRandomly());
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public void OnPointerClick(PointerEventData eventData)
     {
-        DisplayAnimalStats.Instance.DisplayCurrentAnimalStats(stats);
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        DisplayAnimalStats.Instance.HideCurrentAnimalStats();
+        DisplayAnimalStats.Instance.DisplayCurrentAnimalStats(stats, gameObject);
     }
 
     private IEnumerator MoveRandomly()

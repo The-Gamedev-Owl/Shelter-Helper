@@ -7,11 +7,13 @@ public class ClientAnimalManager : MonoBehaviour
 {
     public List<ClientStats> clients;
     public List<AnimalStats> animals;
+    public Dictionary<AnimalStats, ClientStats> placedAnimals;
 
     private void Awake()
     {
         clients = new List<ClientStats>();
         animals = new List<AnimalStats>();
+        placedAnimals = new Dictionary<AnimalStats, ClientStats>();
     }
 
     public ClientStats GetRandomClient()

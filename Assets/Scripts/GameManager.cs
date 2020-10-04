@@ -19,17 +19,19 @@ public class GameManager : MonoBehaviour
     public ClientAnimalGenerator _generator;
     public ClientAnimalManager _manager;
     public AnswerManager _answerManager;
+    public SwitchClientParc _switchClientParc;
 
     private ClientStats currentClient;
 
     private int questionsLeft;
+
+    public static GameManager Instance;
     // Start is called before the first frame update
     void Start()
     {
+        Instance = this;
         _generator.GenerateClientAnimals();
-        questionsLeft = _answerManager.GetRandomNumberOfQuestions();
         ChooseRandomClient();
-        print("Question left: " + questionsLeft);
     }
 
     // Update is called once per frame
@@ -42,6 +44,9 @@ public class GameManager : MonoBehaviour
     {
         currentClient = _manager.GetRandomClient();
 
+        questionsLeft = _answerManager.GetRandomNumberOfQuestions();
+        print("Question left: " + questionsLeft);
+        ResetAllQuestions();
         UpdateClientStat();
     }
 
@@ -135,10 +140,27 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void ResetAllQuestions()
+    {
+        foreach (GameObject button in questionButtons)
+        {
+            button.SetActive(true);
+            button.GetComponent<Button>().interactable = true;
+        }
+    }
+
     public void FreeRandomAnswer()
     {
         int randomIndex = Random.Range(0, 7);
 
         questionButtons.ElementAt(randomIndex).SetActive(false);
+    }
+
+    public void ChooseAnimal(bool hasChosen, AnimalStats animalStats)
+    {
+        if (hasChosen)
+            _manager.placedAnimals.Add(animalStats, currentClient);
+        ChooseRandomClient();
+        _switchClientParc.Switch();
     }
 }
