@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject questionLeftText;
+
     public GameObject gardenText;
     public GameObject childrenText;
     public GameObject houseTypeText;
@@ -45,7 +47,7 @@ public class GameManager : MonoBehaviour
         currentClient = _manager.GetRandomClient();
 
         questionsLeft = _answerManager.GetRandomNumberOfQuestions();
-        print("Question left: " + questionsLeft);
+        questionLeftText.GetComponent<Text>().text = "Question left: " + questionsLeft;
         ResetAllQuestions();
         UpdateClientStat();
     }
@@ -120,11 +122,11 @@ public class GameManager : MonoBehaviour
 
     public void AskButton(int index)
     {
-        print("Question left: " + questionsLeft);
         if (questionsLeft > 0)
         {
             questionButtons.ElementAt(index).SetActive(false);
             questionsLeft -= 1;
+            questionLeftText.GetComponent<Text>().text = "Question left: " + questionsLeft;
         }
         if (questionsLeft == 0)
         {
