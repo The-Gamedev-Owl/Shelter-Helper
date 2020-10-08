@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -42,9 +43,20 @@ public class GameManager : MonoBehaviour
 
     }
 
+    private void EndGame()
+    {
+        SceneManager.LoadScene("EndScene");
+    }
+
     private void ChooseRandomClient()
     {
         currentClient = _manager.GetRandomClient();
+
+        if (currentClient == null)
+        {
+            EndGame();
+            return;
+        }
 
         questionsLeft = _answerManager.GetRandomNumberOfQuestions();
         questionLeftText.GetComponent<Text>().text = "Question left: " + questionsLeft;
@@ -162,6 +174,12 @@ public class GameManager : MonoBehaviour
     {
         if (hasChosen)
             _manager.placedAnimals.Add(animalStats, currentClient);
+
+        if (_manager.placedAnimals.Count == _manager.animals.Count)
+        {
+            EndGame();
+        }
+
         ChooseRandomClient();
         _switchClientParc.Switch();
     }

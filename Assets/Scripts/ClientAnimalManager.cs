@@ -20,6 +20,11 @@ public class ClientAnimalManager : MonoBehaviour
     {
         int index = Random.Range(0, clients.Count);
 
+        if (clients.Count == 0)
+        {
+            return null;
+        }
+
         ClientStats choosed = clients.ElementAt(index);
 
         clients.RemoveAt(index);
