@@ -117,18 +117,7 @@ public class AnswerManager : MonoBehaviour
         }
         else
         {
-            if (income > 1000)
-            {
-                answersList = answers.incomeAnswers.incomeAnswers.Find(item => item.incomeAnswer == Income.High).answers;
-            }
-            else if (income < 500)
-            {
-                answersList = answers.incomeAnswers.incomeAnswers.Find(item => item.incomeAnswer == Income.low).answers;
-            }
-            else
-            {
-                answersList = answers.incomeAnswers.incomeAnswers.Find(item => item.incomeAnswer == Income.medium).answers;
-            }
+            answersList = new List<string>() { income.ToString() };
         }
         return answersList.ElementAt(Random.Range(0, answersList.Count));
     }

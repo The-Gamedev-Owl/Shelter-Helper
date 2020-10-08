@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
 
     private void EndGame()
     {
-        SceneManager.LoadScene("EndScene");
+        SceneManager.LoadScene("EndScene", LoadSceneMode.Additive);
     }
 
     private void ChooseRandomClient()
@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
         }
 
         questionsLeft = _answerManager.GetRandomNumberOfQuestions();
-        questionLeftText.GetComponent<Text>().text = "Question left: " + questionsLeft;
+        questionLeftText.GetComponent<Text>().text = "Questions restantes : " + questionsLeft;
         ResetAllQuestions();
         UpdateClientStat();
     }
@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour
         {
             questionButtons.ElementAt(index).SetActive(false);
             questionsLeft -= 1;
-            questionLeftText.GetComponent<Text>().text = "Question left: " + questionsLeft;
+            questionLeftText.GetComponent<Text>().text = "Questions restantes : " + questionsLeft;
         }
         if (questionsLeft == 0)
         {
