@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6682c27117399da4c9306f9655c5adff, type: 3}
+  m_Name: Income
+  m_EditorClassIdentifier: 
+  incomeAnswers:
+  - incomeAnswer: 0
+    answers:
+    - high 1
+    - high 2
+  - incomeAnswer: 2
+    answers:
+    - medium 1
+    - medium 2
+  - incomeAnswer: 1
+    answers:
+    - low 1
+    - low 2
+  incomeAnswersVague:
+  - incomeAnswer: 0
+    answers:
+    - high vague 1
+    - high vague 2
+  - incomeAnswer: 2
+    answers:
+    - medium vague 1
+    - medium vague 2
+  - incomeAnswer: 1
+    answers:
+    - low vague 1
+    - low vague 2
