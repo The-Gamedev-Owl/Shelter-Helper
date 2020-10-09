@@ -15,18 +15,16 @@ MonoBehaviour:
   hasChildrenAnswers:
   - boolAnswer: 1
     answers:
-    - children 1
-    - children 2
+    - 1 enfants
+    - 3 enfants
   - boolAnswer: 0
     answers:
-    - no children 1
-    - no children 2
+    - Aucun
+    - Non
   hasChildrenAnswersVague:
   - boolAnswer: 1
     answers:
-    - children vague 1
-    - children vague 2
+    - C'est possible
   - boolAnswer: 0
     answers:
-    - no children vague 1
-    - no children vague 2
+    - C'est possible

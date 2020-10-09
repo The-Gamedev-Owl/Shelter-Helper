@@ -1,8 +1,8 @@
 ﻿public enum AnimalPersonality
 {
-	Lovely,
-	Playful,
-	Calm,
-	Energetic,
+	Mignon,
+	Joueur,
+	Calme,
+	Energetique,
 	Independent
 }

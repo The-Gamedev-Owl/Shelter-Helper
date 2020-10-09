@@ -15,42 +15,35 @@ MonoBehaviour:
   animalPersonalityAnswers:
   - personalityAnswer: 0
     answers:
-    - Lovely 1
-    - Lovely 2
+    - Mignon
+    - adorable
   - personalityAnswer: 1
     answers:
-    - Playful 1
-    - Playful 2
+    - Joueur
   - personalityAnswer: 2
     answers:
-    - Calm 1
-    - Calm 2
+    - Calme
+    - "D\xE9tendu"
   - personalityAnswer: 3
     answers:
-    - Energetic 1
-    - Energetic 2
+    - Energetique
+    - Dynamique
   - personalityAnswer: 4
     answers:
-    - Independant 1
-    - Independant 2
+    - Independant
   animalPersonalityAnswersVague:
   - personalityAnswer: 0
     answers:
-    - Lovely Vague 1
-    - Lovely Vague 2
+    - Joli
   - personalityAnswer: 1
     answers:
-    - Playful Vague 1
-    - Playful Vague 2
+    - Amusant
   - personalityAnswer: 2
     answers:
-    - Calm Vague 1
-    - Calm Vague 2
+    - doux
   - personalityAnswer: 3
     answers:
-    - Energetic Vague 1
-    - Energetic Vague 2
+    - actif
   - personalityAnswer: 4
     answers:
-    - Independent Vague 1
-    - Independent Vague 2
+    - autonome

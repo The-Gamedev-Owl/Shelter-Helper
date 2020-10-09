@@ -15,26 +15,23 @@ MonoBehaviour:
   incomeAnswers:
   - incomeAnswer: 0
     answers:
-    - high 1
-    - high 2
+    - "\xE9lev\xE9"
+    - Haut
   - incomeAnswer: 2
     answers:
-    - medium 1
-    - medium 2
+    - Suffisant
+    - Moyen
   - incomeAnswer: 1
     answers:
-    - low 1
-    - low 2
+    - Un peu bas
+    - Gros minimum
   incomeAnswersVague:
   - incomeAnswer: 0
     answers:
-    - high vague 1
-    - high vague 2
+    - Bien
   - incomeAnswer: 2
     answers:
-    - medium vague 1
-    - medium vague 2
+    - OK
   - incomeAnswer: 1
     answers:
-    - low vague 1
-    - low vague 2
+    - Bas

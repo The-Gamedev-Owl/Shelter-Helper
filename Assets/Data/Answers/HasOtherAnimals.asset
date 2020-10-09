@@ -15,8 +15,8 @@ MonoBehaviour:
   hasOtherAnimalsAnswers:
   - boolAnswer: 1
     answers:
-    - other 1
-    - other 2
+    - Oui
+    - 1 chat
   - boolAnswer: 0
     answers:
     - no other 1
@@ -24,9 +24,7 @@ MonoBehaviour:
   hasOtherAnimalsAnswersVague:
   - boolAnswer: 1
     answers:
-    - other vague 1
-    - other vague 2
+    - Chat du voisin
   - boolAnswer: 0
     answers:
-    - no other vague 1
-    - no other vague 2
+    - probablement pas

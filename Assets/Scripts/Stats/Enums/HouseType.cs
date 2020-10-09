@@ -1,5 +1,5 @@
 ﻿public enum HouseType
 {
-	Apartment,
-	House
+	Appartement,
+	Maison
 }

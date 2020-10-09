@@ -15,26 +15,23 @@ MonoBehaviour:
   clientPersonalityAnswers:
   - personalityAnswer: 0
     answers:
-    - Good 1
-    - Good 2
+    - Gentil
   - personalityAnswer: 1
     answers:
-    - Neutral 1
-    - Neutral 2
+    - Normal
   - personalityAnswer: 2
     answers:
-    - Bad 1
-    - Bad 2
+    - "M\xE9chant"
   clientPersonalityAnswersVague:
   - personalityAnswer: 0
     answers:
-    - Good Vague 1
-    - Good Vague 2
+    - Gentil
+    - Affectueux
   - personalityAnswer: 1
     answers:
-    - Neutral vague 1
-    - Neutral vague 2
+    - Normal
+    - Normal
   - personalityAnswer: 2
     answers:
-    - Bad vague 1
-    - Bad vague 2
+    - maltraitance animal
+    - "M\xE9chant"

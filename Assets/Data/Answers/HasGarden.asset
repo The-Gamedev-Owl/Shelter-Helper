@@ -15,18 +15,15 @@ MonoBehaviour:
   hasGardenAnswers:
   - boolAnswer: 1
     answers:
-    - garden 1
-    - garden 2
+    - Oui
+    - "Tr\xE8s grand"
   - boolAnswer: 0
     answers:
-    - no garden 1
-    - no garden 2
+    - Aucun
   hasGardenAnswersVague:
   - boolAnswer: 1
     answers:
-    - garden vague 1
-    - garden vague 2
+    - "quelque m\xB2"
   - boolAnswer: 0
     answers:
-    - no garden vague 1
-    - no garden vague 2
+    - un balcon

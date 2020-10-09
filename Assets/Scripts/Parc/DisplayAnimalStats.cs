@@ -29,11 +29,11 @@ public class DisplayAnimalStats : MonoBehaviour
     {
         _currentAnimalStats = currentStats;
         _currentAnimalGameObject = currentAnimalGameObject;
-        _needsGarden.text = (currentStats.HasGarden) ? ("Yes") : ("No");
-        _goodWithChildren.text = (currentStats.HasChildren) ? ("Yes") : ("No");
+        _needsGarden.text = (currentStats.HasGarden) ? ("Oui") : ("Non");
+        _goodWithChildren.text = (currentStats.HasChildren) ? ("Oui") : ("Non");
         _bestHomeType.text = currentStats.HouseType.ToString();
         _monthlyCost.text = currentStats.Cost.ToString();
-        _goodWithOtherAnimals.text = (currentStats.HasOtherAnimals) ? ("Yes") : ("No");
+        _goodWithOtherAnimals.text = (currentStats.HasOtherAnimals) ? ("Oui") : ("Non");
         _animalPersonality.text = currentStats.AnimalPersonality.ToString();
 
         _canvasGroup.alpha = 1f;

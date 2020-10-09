@@ -15,18 +15,15 @@ MonoBehaviour:
   houseAnswers:
   - houseAnswer: 0
     answers:
-    - apartment 1
-    - apartment 2
+    - appartement
+    - Duplex
   - houseAnswer: 1
     answers:
-    - house 1
-    - house 2
+    - Maison
   houseAnswersVague:
   - houseAnswer: 0
     answers:
-    - apartment vague 1
-    - apartment vague 2
+    - Appartement
   - houseAnswer: 1
     answers:
-    - house vague 1
-    - house vague 2
+    - Maison
